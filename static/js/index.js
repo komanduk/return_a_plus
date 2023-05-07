@@ -6,7 +6,7 @@ form.forEach( (likeform) => {
     const postId = event.target.dataset.postId
     axios({
       method: 'POST',
-      url: `http://127.0.0.1:8000/${postId}/like/`,
+      url: `/${postId}/like/`,
       headers: {'X-CSRFToken':csrftoken,}
     })
     .then((response) => {
